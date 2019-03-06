@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.container {
+  position:relative;
+  display: none;
+}
+
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+
+.closebtn {
+  position:absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+	#navbar ul li {
+		display: inline;
+	margin:0px;
+	padding: 5px;
+	list-style-type: none;	
+			float: right;
+	}
+	#navbar{background-image:url(banner.jpg);
+		height:250px;width: 100%;clear: both;
+		   }
+	#navbar ul{
+		margin: 0;padding: 0;list-style-type: none;
+	          }
+	#footer{width:100%;height:150px;padding: 20px;clear: both;background-color: #807373;}
+	#header{width:100%;height:100px;background-image:url(covering.jpg);}
+	#Discription{width: 100%;height:1005;background-color:#6F8BF9;}
+</style>
+<link href="Style2.css" rel="stylesheet">
+</head>
+<body>
+<div>
+<div id="header">
+	<ul>
+	<li><a>Home</a>
+	<ul>
+	<li><a href="Index.html">Home</a></li>
+	<li><a href="Water_world.html">Water Wold</a></li>
+	<li><a href="Bird_park.html">Bird Park</a></li>
+	<li><a href="Under_tunnel.html">Under Tunnel</a></li>
+	</ul>
+	</li>
+	
+	<li><a>Buy Ticket</a>
+	<ul>
+		<li><a>For Local Visitor</a></li>
+		<li><a>For School childran</a></li>
+		<li><a>For Foreign Visitor</a></li>
+	</ul>
+	</li>
+	
+	
+	<li><a>Gallery</a>
+	<ul>
+	<li><a href="Water_world_Gallery.html">Water Wold</a></li>
+	<li><a href="Bird_park_Gallery.html">Bird Park</a></li>
+	<li><a href="Under_tunnel_Gallery.html">Under Water Tunnel</a></li>
+	<li><a>Activities</a></li>
+	<li><a>Video</a></li>
+	<li><a>Featured</a></li>
+	</ul>
+	</li>
+	
+	
+	<li><a>Education</a></li>
+	
+	<li><a>Contact Us</a>
+	<ul>
+	<li><a>For Manager</a></li>
+	<li><a>Other Details</a></li>
+	</ul>
+	</li>
+	
+		<li><a>Location</a></li>
+</ul>
+	
+	
+	</div>
+	
+	<div id="navbar">
+	<br>
+	<br>
+	<br>
+	<h1><center>***WATER WORLD GALLERY***</center></h1>
+	
+	</div>
+
+<div class="row">
+<div class="column">
+    <img src="111.jpg" alt="Fish" style="width:80%" onclick="myFunction(this);">
+  </div>
+<div class="column">
+    <img src="22.jpg" alt="Fish" style="width:80%" onclick="myFunction(this);">
+  </div>
+<div class="column">
+    <img src="33.jpg" alt="Fish" style="width:80%" onclick="myFunction(this);">
+  </div>
+ <div class="column">
+    <img src="44.jpg" alt="Fish" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="55.jpg" alt="Fish" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="66.jpg" alt="Fish" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="77.jpg" alt="Fish" style="width:80%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="88.jpg" alt="Fish" style="width:80%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:70%">
+  
+  <div id="imgtext"></div>
+</div>
+	</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
